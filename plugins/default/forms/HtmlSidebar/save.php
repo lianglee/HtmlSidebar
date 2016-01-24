@@ -10,11 +10,11 @@
  */
  ?>
  <div>
-	 <label>Enter HTML code here</label>
+	 <label>?php echo ossn_print('htmlsidebar:entertext'); ?></label>
  	<textarea name="html">
  	
  	</textarea>
  </div>
  <div>
- 	<input type="submit" value="Save" class="btn btn-primary"/>
+ 	<input type="submit" value="<?php echo ossn_print('button:save'); ?>" class="btn btn-primary"/>
  </div>   
