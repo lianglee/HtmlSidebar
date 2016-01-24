@@ -9,6 +9,10 @@
  * @link      http://www.opensource-socialnetwork.org/licence
  */
 $en = array(
-   'htmlsidebar' => 'HTML on sidebar'
+   'htmlsidebar' => 'HTML on sidebar',
+   'htmlsidebar:saved' => 'Successfully saved html',
+   'htmlsidebar:save:error' => 'Can not save html',
+   'button:save' => 'Save',
+   'htmlsidebar:entertext' => 'Enter HTML code here',
 );
 ossn_register_languages('en', $en);
