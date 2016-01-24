@@ -15,9 +15,9 @@ $vars = array(
 			 'free_html' => $input
 		 );
 if($component->setSettings('HtmlSidebar', $vars)){
-	ossn_trigger_message('Successfully saved html');
+	ossn_trigger_message(ossn_print('htmlsidebar:saved'));
 	redirect(REF);
 } else {
-	ossn_trigger_message('Can not save html', 'error');
+	ossn_trigger_message(ossn_print('htmlsidebar:save:error'), 'error');
 	redirect(REF);
 }
