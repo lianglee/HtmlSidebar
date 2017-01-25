@@ -40,7 +40,7 @@ function html_widget($hook, $tye, $return){
  */
 function html_sidebar_output($text = ''){
 	if(!empty($text)){
-		return html_entity_decode($text, ENT_COMPAT, 'utf-8');
+		return html_entity_decode($text, ENT_QUOTES, 'utf-8');
 	}
 }
 ossn_register_callback('ossn', 'init', 'html_sidebar');
