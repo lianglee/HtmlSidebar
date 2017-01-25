@@ -10,7 +10,7 @@
  */
  ?>
  <div>
-	 <label>?php echo ossn_print('htmlsidebar:entertext'); ?></label>
+	 <label><?php echo ossn_print('htmlsidebar:entertext'); ?></label>
  	<textarea name="html">
  	
  	</textarea>
