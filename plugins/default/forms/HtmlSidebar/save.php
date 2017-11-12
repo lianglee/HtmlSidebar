@@ -10,10 +10,8 @@
  */
  ?>
  <div>
-	 <label><?php echo ossn_print('htmlsidebar:entertext'); ?></label>
- 	<textarea name="html">
- 	
- 	</textarea>
+	<label><?php echo ossn_print('htmlsidebar:entertext'); ?></label>
+ 	<textarea name="html"><?php $component = new OssnComponents; $settings = $component->getSettings('HtmlSidebar'); echo html_sidebar_output($settings->free_html); ?></textarea>
  </div>
  <div>
  	<input type="submit" value="<?php echo ossn_print('button:save'); ?>" class="btn btn-primary"/>
