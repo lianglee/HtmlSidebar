@@ -2,12 +2,12 @@
 /**
  * Open Source Social Network
  *
- * @packageOpen Source Social Network
- * @author    Open Social Website Core Team <info@informatikon.com>
- * @copyright 2014 iNFORMATIKON TECHNOLOGIES
- * @license   General Public Licence http://www.opensource-socialnetwork.org/licence
- * @link      http://www.opensource-socialnetwork.org/licence
+ * @package   Open Source Social Network
+ * @author    Open Social Website Core Team <info@softlab24.com>
+ * @copyright (C) SOFTLAB24 LIMITED
+ * @license   Open Source Social Network License (OSSN LICENSE)  http://www.opensource-socialnetwork.org/licence
+ * @link      https://www.opensource-socialnetwork.org/
  */
 $component = new OssnComponents;
 $settings  = $component->getSettings('HtmlSidebar');
-echo html_sidebar_output($settings->free_html);
+echo com_html_sidebar_output($settings->free_html);

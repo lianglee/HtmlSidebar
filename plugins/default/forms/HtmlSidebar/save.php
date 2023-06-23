@@ -2,17 +2,42 @@
 /**
  * Open Source Social Network
  *
- * @packageOpen Source Social Network
- * @author    Open Social Website Core Team <info@informatikon.com>
- * @copyright 2014 iNFORMATIKON TECHNOLOGIES
- * @license   General Public Licence http://www.opensource-socialnetwork.org/licence
- * @link      http://www.opensource-socialnetwork.org/licence
+ * @package   Open Source Social Network
+ * @author    Open Social Website Core Team <info@softlab24.com>
+ * @copyright (C) SOFTLAB24 LIMITED
+ * @license   Open Source Social Network License (OSSN LICENSE)  http://www.opensource-socialnetwork.org/licence
+ * @link      https://www.opensource-socialnetwork.org/
  */
- ?>
+
+$component = new OssnComponents;
+$settings = $component->getComSettings('HtmlSidebar');
+?>
+
+<label><?php echo ossn_print('com_htmlsidebar:admin:settings:mobile_sidebar:title');?></label>
+<?php echo ossn_print('com_htmlsidebar:admin:settings:mobile_sidebar:note');?>
+<select name="mobile_sidebar">
+ 	<?php
+	$mobile_sidebar_off = '';
+	$mobile_sidebar_on = '';
+	if($settings && $settings->mobile_sidebar == 'on'){
+		$mobile_sidebar_on = 'selected';
+	} else {
+		$mobile_sidebar_off = 'selected';
+	}
+	?>
+	<option value="off" <?php echo $mobile_sidebar_off;?>><?php echo ossn_print('ossn:admin:settings:off');?></option>
+	<option value="on" <?php echo $mobile_sidebar_on;?>><?php echo ossn_print('ossn:admin:settings:on');?></option>
+</select>
+<br />
  <div>
-	<label><?php echo ossn_print('htmlsidebar:entertext'); ?></label>
- 	<textarea class="ossn-editor" name="html"><?php $component = new OssnComponents; $settings = $component->getSettings('HtmlSidebar'); echo $settings->free_html;?></textarea>
+	<label><?php echo ossn_print('com_htmlsidebar:entertext'); ?></label>
+	<textarea class="html-sidebar-editor" name="html"><?php echo $settings->free_html;?></textarea>
  </div>
+<br />
  <div>
- 	<input type="submit" value="<?php echo ossn_print('button:save'); ?>" class="btn btn-primary"/>
+ 	<input type="submit" value="<?php echo ossn_print('save'); ?>" class="btn btn-success"/>
  </div>   
+
+<?php
+	echo ossn_plugin_view('htmlsidebar/js');
+?>
