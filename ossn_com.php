@@ -16,12 +16,18 @@ define('__HTML_SIDEBAR__', ossn_route()->com . 'HtmlSidebar/');
  * return void
  */
 function com_html_sidebar(){
+	// hook replacement to prevent issues caused by loading scripts or tag ids twice
+	ossn_extend_view('ossn/site/head','htmlsidebar/output_selector');
+
+	/*
 	ossn_add_hook('newsfeed', "sidebar:right", 'com_html_widget');
 	$component = new OssnComponents;
 	$settings = $component->getComSettings('HtmlSidebar');
 	if($settings && $settings->mobile_sidebar == 'on'){
 		ossn_add_hook('newsfeed', "center:top", 'com_html_widget');
 	}
+	*/
+
     if (ossn_isAdminLoggedin()) {
 		ossn_register_com_panel('HtmlSidebar', 'settings');	
         ossn_register_action('html/sidebar/save', __HTML_SIDEBAR__ . 'actions/save.php');
